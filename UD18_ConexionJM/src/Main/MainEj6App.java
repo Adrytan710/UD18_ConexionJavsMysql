@@ -11,7 +11,7 @@ public class MainEj6App {
 	
 	public static void main(String[] args) {
 		createDB("Piezas_Proveedores");
-		openConnection();
+		openConnection(); 
 		createTable("Piezas_Proveedores", "Piezas", "(Codigo INT PRIMARY KEY AUTO_INCREMENT, Nombre NVARCHAR(100))");
 		createTable("Piezas_Proveedores", "Proveedores", "(Id CHAR(4) PRIMARY KEY, Nombre NVARCHAR(100))");
 		createTable("Piezas_Proveedores", "Suministra", "(CodigoPieza INT PRIMARY KEY, IdProveedor CHAR(4), Precio INT,"
