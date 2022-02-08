@@ -15,6 +15,7 @@ public class ej1App {
 		createDB("TiendaInformatica");
 		openConnection();
 		createTable("TiendaInformatica", "Fabricantes", "Articulos");
+		insert("TiendaInformatica", "Fabricantes", "Articulos");
 		closeConnection();
 	}
 	
@@ -79,4 +80,40 @@ public class ej1App {
 		}
 	}
 
+	public static void insert(String db, String tabla1, String tabla2) {
+		try {
+			String Querydb = "USE " + db + ";";
+			Statement stdb = conexion.createStatement();
+			stdb.executeUpdate(Querydb);
+			
+			String Insert1T1 = "Insert into " + tabla1 + " (Codigo, Nombre) VALUES ('11', 'Nvidia')";
+			String Insert2T1 = "Insert into " + tabla1 + " (Codigo, Nombre) VALUES ('12', 'AMD')";
+			String Insert3T1 = "Insert into " + tabla1 + " (Codigo, Nombre) VALUES ('13', 'Intel')";
+			String Insert4T1 = "Insert into " + tabla1 + " (Codigo, Nombre) VALUES ('14', 'Razer')";
+			String Insert5T1 = "Insert into " + tabla1 + " (Codigo, Nombre) VALUES ('15', 'Canon')";
+			
+			String Insert1T2 = "Insert into " + tabla2 + " (Codigo, Nombre, Precio, Fabricante) VALUES ('21', 'GPU', '100', '11')";
+			String Insert2T2 = "Insert into " + tabla2 + " (Codigo, Nombre, Precio, Fabricante) VALUES ('22', 'Procesador', '350', '12')";
+			String Insert3T2 = "Insert into " + tabla2 + " (Codigo, Nombre, Precio, Fabricante) VALUES ('23', 'Procesador', '400', '13')";
+			String Insert4T2 = "Insert into " + tabla2 + " (Codigo, Nombre, Precio, Fabricante) VALUES ('24', 'Cascos', '85', '14')";
+			String Insert5T2 = "Insert into " + tabla2 + " (Codigo, Nombre, Precio, Fabricante) VALUES ('25', 'Camara', '700', '15')";
+			
+			Statement st = conexion.createStatement();
+			st.executeUpdate(Insert1T1);
+			st.executeUpdate(Insert2T1);
+			st.executeUpdate(Insert3T1);
+			st.executeUpdate(Insert4T1);
+			st.executeUpdate(Insert5T1);
+			
+			st.executeUpdate(Insert1T2);
+			st.executeUpdate(Insert2T2);
+			st.executeUpdate(Insert3T2);
+			st.executeUpdate(Insert4T2);
+			st.executeUpdate(Insert5T2);
+			
+		}catch (SQLException ex){
+			System.out.println(ex.getMessage());
+			System.out.println("Error con els inserts");
+		}		
+	}
 }
