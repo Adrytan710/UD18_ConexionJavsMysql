@@ -27,7 +27,7 @@ public class MainApp {
 		insertData("ud18_ej2", "Empleados", "(DNI, Nombre, Apellidos, Departamento) VALUES ('54236789A', 'Jordi', 'Garcia', '2')");
 		insertData("ud18_ej2", "Empleados", "(DNI, Nombre, Apellidos, Departamento) VALUES ('41275345D', 'Jose', 'Rodriguez', '4')");
 		insertData("ud18_ej2", "Empleados", "(DNI, Nombre, Apellidos, Departamento) VALUES ('42356872F', 'Rafa', 'Nadal', '3')");
-		insertData("ud18_ej2", "Empleados", "(DNI, Nombre, Apellidos, Departamento) VALUES ('74253681C', 'Gerard', 'Navas', '5')");
+		insertData("ud18_ej2", "Empleados", "(DNI, Nombre, Apellidos, Departamento) VALUES ('74253681C', 'Gerard', 'Navas', '5')"); 
 		closeConection();
 
 	}
