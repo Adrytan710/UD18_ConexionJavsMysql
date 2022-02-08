@@ -12,7 +12,7 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		createDB("ud18_ud12_ej7");
+		createDB("ud18_ud12_ej7"); 
 
 		openConection();
 		createTable("ud18_ud12_ej7", "Nominas", "(idNominas int PRIMARY KEY, Fecha date, Salario double)");
